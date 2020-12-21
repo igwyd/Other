@@ -1,0 +1,108 @@
+[2020-12-21T12:43:42.500] [ERROR] nodeJS - postData error: docId = Oy2oAF9hIH0gy6heUMM_;url = http://ec2amaz-udbgrni//_layouts/15/Onlyoffice/CallbackHandler.ashx?data=ZVQ4UlNuV1hVTWhvRG95SElObjNpcTdBVk02bzAvNzhacm5kdEYxY1JHUT0%2feyJTUExpc3RJdGVtSWQiOiIyNSIsIkZvbGRlciI6Ii9UZXN0RG9jdW1lbnRMaWIv0JTQvtC60YPQvNC10L3RgtGLINC00LvRjyDRgtC10YHRgtC40YDQvtCy0LDQvdC40Y8g0LTQu9C40L3QvdC%2bIiwiU1BMaXN0RGlyIjoiL1Rlc3REb2N1bWVudExpYiIsImFjdGlvbiI6InRyYWNrIn0%3d;data = {"key":"Oy2oAF9hIH0gy6heUMM_","status":1,"users":["0"],"actions":[{"type":1,"userid":"0"}]}
+Error: Error response: statusCode:500; headers:{"cache-control":"private","content-type":"text/html; charset=utf-8","server":"Microsoft-IIS/10.0","x-aspnet-version":"4.0.30319","sprequestguid":"0878999f-305f-c0fc-0000-0e6fe46a1edb","request-id":"0878999f-305f-c0fc-0000-0e6fe46a1edb","x-frame-options":"SAMEORIGIN","sprequestduration":"8","spiislatency":"0","x-powered-by":"ASP.NET","microsoftsharepointteamservices":"16.0.0.4327","x-content-type-options":"nosniff","x-ms-invokeapp":"1; RequireReadOnly","date":"Mon, 21 Dec 2020 12:43:42 GMT","content-length":"4681"}; body:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Invalid length for a Base-64 char array or string.</title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;}
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>Server Error in '/' Application.<hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>Invalid length for a Base-64 char array or string.</i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> Description: </b>An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code.
+
+            <br><br>
+
+            <b> Exception Details: </b>System.FormatException: Invalid length for a Base-64 char array or string.<br><br>
+
+            <b>Source Error:</b> <br><br>
+
+            <table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code>
+
+An unhandled exception was generated during the execution of the current web request. Information regarding the origin and location of the exception can be identified using the exception stack trace below.</code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <b>Stack Trace:</b> <br><br>
+
+            <table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+[FormatException: Invalid length for a Base-64 char array or string.]
+   System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength) +307
+   System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength) +146
+   System.Convert.FromBase64String(String s) +49
+   Onlyoffice.Encryption.Decode(String data, String&amp; SPListItemId, String&amp; Folder, String&amp; SPListDir, String&amp; action, Int32 secret) +163
+   Onlyoffice.CallbackHandler.ProcessRequest(HttpContext context) +837
+   System.Web.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +508
+   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously) +92
+</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <hr width=100% size=1 color=silver>
+
+            <b>Version Information:</b>&nbsp;Microsoft .NET Framework Version:4.0.30319; ASP.NET Version:4.6.1637.0
+
+            </font>
+
+    </body>
+</html>
+<!--
+[FormatException]: Invalid length for a Base-64 char array or string.
+   at System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at Onlyoffice.Encryption.Decode(String data, String& SPListItemId, String& Folder, String& SPListDir, String& action, Int32 secret)
+   at Onlyoffice.CallbackHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--><!--
+This error page might contain sensitive information because ASP.NET is configured to show verbose error messages using &lt;customErrors mode="Off"/&gt;. Consider using &lt;customErrors mode="On"/&gt; or &lt;customErrors mode="RemoteOnly"/&gt; in production environments.-->
+    at Request._callback (/snapshot/server/build/server/Common/sources/utils.js:0:0)
+    at Request.init.self.callback (/snapshot/server/build/server/Common/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:198:13)
+    at Request.<anonymous> (/snapshot/server/build/server/Common/node_modules/request/request.js:1154:10)
+    at Request.emit (events.js:198:13)
+    at IncomingMessage.<anonymous> (/snapshot/server/build/server/Common/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (events.js:286:20)
+    at IncomingMessage.emit (events.js:203:15)
+    at endReadableNT (_stream_readable.js:1143:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
