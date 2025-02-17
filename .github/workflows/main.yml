@@ -24,4 +24,4 @@ jobs:
           pwd
 
       - name: apt
-        run: apt update
+        run: sudo apt update
