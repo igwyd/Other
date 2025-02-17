@@ -15,9 +15,13 @@ jobs:
   test-command:
     runs-on: ubuntu-latest
     steps:
-      - name: Run server
+      - name: ls
         run: |
-          lscpu
-          cat /etc/os-release
-          ls
-          df -h
+          ls -laht
+
+      - name: pwd
+        run: |
+          pwd
+
+      - name: apt
+        run: apt update
