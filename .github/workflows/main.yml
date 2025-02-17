@@ -1,0 +1,23 @@
+name: test
+
+on:
+#  schedule:
+#    - cron: '0 12 * * 3'  # Wednesday 15:00 Mosсow time (UTC+3)
+#  push:
+#    branches:
+#      - main
+#  pull_request:
+#    branches:
+#      - main
+  workflow_dispatch:
+
+jobs:
+  test-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run server
+        run: |
+          lscpu
+          cat /etc/os-release
+          ls
+          df -h
