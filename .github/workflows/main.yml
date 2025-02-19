@@ -48,4 +48,5 @@ jobs:
       - name: Smoke puppeteer test
         run: |
           cd Dep.Tests/puppeteer/engine
-          python3 run.py ../tests/desktop/word/smoke/open-close-file-tab.js
+          python3 run.py --prcache
+          python3 run.py ../tests/desktop/word/smoke
