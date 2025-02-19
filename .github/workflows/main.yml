@@ -29,10 +29,8 @@ jobs:
           sed -i 's/"headless": false/"headless": true/' puppeteer/config_chrome_linux.json
           cd puppeteer/engine
           npm install
-          pwd
 
       - name: Smoke puppeteer test
         run: |
-          pwd
-          ls
+          cd Dep.Tests/puppeteer/engine
           python3 run.py ../tests/desktop/word/smoke/open-close-file-tab.js
