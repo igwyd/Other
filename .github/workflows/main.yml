@@ -17,6 +17,21 @@ jobs:
     steps:
       - name: Install prerequisites for puppeteer tests
         run: |
+          sudo apt-get update
+          curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+          sudo apt-get install -y nodejs
+          sudo apt install -y python3 python3-pip
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo dpkg -i google-chrome-stable_current_amd64.deb
+          sudo apt-get install -f -y
+          google-chrome --version
+          python3 --version
+          pip3 --version
+          node -v
+          npm -v
+
+      - name: clone repo
+        run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.GIT_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
